@@ -39,7 +39,6 @@ import JWT from '#utils/jwt';
                 'register',
             ].includes(fieldName)) {
                 return {
-                    req,
                     agent: req.headers['user-agent']
                 }
             }
