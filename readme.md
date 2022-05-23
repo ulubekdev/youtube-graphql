@@ -2,7 +2,7 @@
 
 <h4>Mutation<h4>
 Mutation fields and arguments
-Mutation {
+    Mutation {
     register (
         username: String!, 
         password: String, 
@@ -32,7 +32,7 @@ Mutation {
 }
 <h4>Query<h4>
 Query fields and arguments
-Query {
+    Query {
     videos(
         search: String!
         userId: ID!
