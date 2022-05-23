@@ -2,7 +2,6 @@
 
 <h4>Mutation<h4>
 Mutation fields and arguments
-    mutation {
     register (
         username: String!, 
         password: String, 
@@ -29,10 +28,8 @@ Mutation fields and arguments
             title: String!
         ): VideoResponse!
     }
-}
 <h4>Query<h4>
 Query fields and arguments
-    query {
     videos(
         search: String!
         userId: ID!
@@ -52,7 +49,6 @@ Query fields and arguments
         pagination: Pagination!
         search: String!
     ): [Video!]                                [private]
-}
 <h4>Response</h4>
 AuthResponse | VideoResponse {
     status: Int!
