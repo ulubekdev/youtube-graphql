@@ -1,6 +1,7 @@
 <h1>Little YouTube GraphQL app with PostgreSQL</h1>
 
 <h4>Mutation<h4>
+Mutation fields and arguments
 Mutation {
     register (
         username: String!, 
@@ -30,6 +31,7 @@ Mutation {
     }
 }
 <h4>Query<h4>
+Query fields and arguments
 Query {
     videos(
         search: String!
