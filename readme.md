@@ -29,7 +29,6 @@ Mutation {
         ): VideoResponse!
     }
 }
-
 <h4>Query<h4>
 Query {
     videos(
@@ -52,7 +51,6 @@ Query {
         search: String!
     ): [Video!]                                [private]
 }
-
 <h4>Response</h4>
 AuthResponse | VideoResponse {
     status: Int!
