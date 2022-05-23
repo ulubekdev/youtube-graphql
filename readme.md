@@ -1,6 +1,5 @@
 <h1>Little YouTube GraphQL app with PostgreSQL</h1>
 
-<h4>Mutation<h4>
 Mutation fields and arguments
     
     
@@ -31,7 +30,6 @@ Mutation fields and arguments
         ): VideoResponse!
     }
 
-<h4>Query<h4>
 Query fields and arguments
 
 
@@ -56,7 +54,6 @@ Query fields and arguments
     ): [Video!]                                [private]
 
 
-<h4>Response</h4>
 AuthResponse | VideoResponse
 
 
