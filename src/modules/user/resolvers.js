@@ -51,7 +51,7 @@ export default {
             };
         },
         register: async (_, { username, password, image }, { agent }) => {
-            const { createReadStream, filename } = await image;
+            const { createReadStream, filename, mimetype } = await image;
             const fileName = Date.now() + filename.replace(/\s/g, '');
             username = username.trim();
             password = password.trim(); 
@@ -60,12 +60,20 @@ export default {
             if (user) {
                 throw new Error('Username already exists');
             }
+            if([
+                'image/jpeg',
+                'image/png',
+                'image/jpg'
+            ].includes(mimetype)) {
+                throw new Error('Image type is not supported');
+            }
 
-            const hash = sha256(password);
             const out = fs.createWriteStream(path.join(process.cwd(), 'uploads', 'images', fileName));
             createReadStream().pipe(out)
             await finished(out)
+            
 
+            const hash = sha256(password);
             const userData = {
                 username,
                 password: hash,

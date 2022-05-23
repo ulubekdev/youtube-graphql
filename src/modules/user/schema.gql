@@ -8,19 +8,19 @@ type Query {
 type Mutation {
     register(
         username: String!
-        password: String
+        password: String!
         image: Upload!
     ): AuthResponse!
 
     login(
         username: String!
-        password: String
+        password: String!
     ): AuthResponse!
 }
 
 type User {
     userId: ID!
     username: String!
-    password: String
+    password: String!
     image: Link!
 }
