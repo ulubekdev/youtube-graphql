@@ -57,11 +57,10 @@ Query fields and arguments
 
 
 <h4>Response</h4>
+AuthResponse | VideoResponse
 
 
-AuthResponse | VideoResponse {
     status: Int!
     message: String!
     data: Video | User
     token: Token!
-}
