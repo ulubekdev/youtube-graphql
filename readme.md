@@ -1,5 +1,6 @@
 <h1>Little YouTube GraphQL app with PostgreSQL</h1>
 
+<h2>Mutation<h2>
 Mutation {
     register (
         username: String!, 
@@ -29,6 +30,7 @@ Mutation {
     }
 }
 
+<h2>Query<h2>
 Query {
     videos(
         search: String!
@@ -51,7 +53,7 @@ Query {
     ): [Video!]                                [private]
 }
 
-
+<h2>Response</h2>
 AuthResponse | VideoResponse {
     status: Int!
     message: String!
