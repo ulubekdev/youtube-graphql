@@ -68,7 +68,7 @@ export default {
                 mime_type: mimetype,
                 userId
             });
-
+            
             return {
                 status: 200,
                 message: 'Upload success',

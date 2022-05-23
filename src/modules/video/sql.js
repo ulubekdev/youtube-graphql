@@ -42,19 +42,19 @@ const GET_MY_VIDEOS = `
 const UPLOAD_VIDEO = `
     INSERT INTO videos (title, video_url, video_size, mime_type, userid)
     VALUES ($1, $2, $3, $4, $5)
-    RETURNING videoid, title, video_url, video_size, mime_type, video_created_at, userid;
+    RETURNING *;
 `;
 const DELETE_VIDEO = `
     DELETE FROM videos
     WHERE videoid = $1
-    RETURNING videoid, title, video_url, video_size, mime_type, video_created_at, userid;
+    RETURNING *;
 `;
 
 const UPDATE_VIDEO = `
     UPDATE videos
     SET title = $2
     WHERE videoid = $1
-    RETURNING videoid, title, video_url, video_size, mime_type, video_created_at, userid;
+    RETURNING *;
 `;
 
 export default {
