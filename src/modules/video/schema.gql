@@ -1,0 +1,37 @@
+type Query {
+    videos(
+        pagination: Pagination = {}
+        search: String
+    ): [Video!]!
+    video(
+        videoId: ID
+        title: String
+    ): Video
+    myvideos(
+        pagination: Pagination = {}
+        search: String
+    ): Video
+}
+
+
+type Mutation {
+    uploadVideo(
+        title: String!
+        video: Upload!
+    ): VideoResponse!
+    deleteVideo(
+        videoId: ID!
+    ): VideoResponse!
+    updateVideo(
+        videoId: ID!
+        title: String!
+    ): VideoResponse!
+}
+
+type Video {
+    videoId: ID!
+    title: String!
+    video_url: String!
+    video_size: String
+    mime_type: String
+}

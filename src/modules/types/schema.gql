@@ -1,0 +1,21 @@
+input Pagination {
+    page: Int
+    limit: Int
+}
+
+type AuthResponse {
+    status: Int!
+    message: String!
+    data: User
+    token: Token
+}
+
+type VideoResponse {
+    status: Int!
+    message: String!
+    data: Video
+}
+
+scalar Token
+scalar Link
+scalar Upload
