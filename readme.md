@@ -55,8 +55,10 @@ Query fields and arguments
         search: String!
     ): [Video!]                                [private]
 
-    
+
 <h4>Response</h4>
+
+
 AuthResponse | VideoResponse {
     status: Int!
     message: String!
